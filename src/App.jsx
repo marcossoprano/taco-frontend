@@ -17,7 +17,7 @@ function App() {
       return;
     }
     try {
-      const response = await axios.get(`http://localhost:8000/alimentos/sugestoes/?q=${encodeURIComponent(valor)}`);
+  const response = await axios.get(`https://taco-backend-9.onrender.com/alimentos/sugestoes/?q=${encodeURIComponent(valor)}`);
       if (response.data && response.data.sugestoes) {
         setSugestoes(response.data.sugestoes);
       } else {
@@ -32,7 +32,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get('http://localhost:8000/alimentos/');
+  const response = await axios.get('https://taco-backend-9.onrender.com/alimentos/');
       setAlimentos(response.data);
     } catch (err) {
       setError('Erro ao buscar alimentos');
@@ -48,7 +48,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get(`http://localhost:8000/alimentos/?nome=${encodeURIComponent(busca)}&quantidade=${encodeURIComponent(quantidade)}`);
+  const response = await axios.get(`https://taco-backend-9.onrender.com/alimentos/?nome=${encodeURIComponent(busca)}&quantidade=${encodeURIComponent(quantidade)}`);
       setAlimentos(response.data);
     } catch (err) {
       setError('Erro ao buscar alimento');
