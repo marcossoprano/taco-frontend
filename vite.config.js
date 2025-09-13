@@ -5,6 +5,6 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   preview: {
-    allowedHosts: ['taco-frontend-1.onrender.com']
+    allowedHosts: ['taco-frontend-1.onrender.com', 'taco-frontend.onrender.com']
   },
 })
