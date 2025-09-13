@@ -27,31 +27,10 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--color-primary);
   color: var(--color-white);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 2.5rem;
   letter-spacing: 1px;
-}
-
-.consulta-centralizada {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  max-width: 100vw;
-  margin-top: 2rem;
-}
-
-.food-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  margin: 2rem 0;
-  width: 100vw;
 }
 
 .card {
@@ -64,12 +43,6 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.card-green {
-  background: var(--color-primary);
-  color: var(--color-white);
-  border: 2px solid #145A32;
 }
 
 .card img {
