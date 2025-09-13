@@ -32,10 +32,18 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-  const response = await axios.get('https://taco-backend-9.onrender.com/alimentos/');
-      setAlimentos(response.data);
+      const response = await axios.get('https://taco-backend-9.onrender.com/alimentos/');
+      // Se o backend retorna um array, mantém. Se retorna objeto, transforma em array.
+      if (Array.isArray(response.data)) {
+        setAlimentos(response.data);
+      } else if (response.data) {
+        setAlimentos([response.data]);
+      } else {
+        setAlimentos([]);
+      }
     } catch (err) {
       setError('Erro ao buscar alimentos');
+      setAlimentos([]);
     }
     setLoading(false);
   };
